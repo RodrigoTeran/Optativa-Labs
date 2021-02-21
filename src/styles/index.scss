@@ -1,0 +1,79 @@
+// Utils
+@import "./utils/mixins";
+
+:root {
+  --color-icons-layout: #202020;
+  --border-works: rgb(36, 36, 36);
+  --background-color-works: rgb(20, 20, 20);
+  --background-color-body: #1d1d1d;
+  --text-color-body: #fff;
+  --text-color-body-2: #000;
+  --text-color-body-3: #ddd;
+  --text-selection: #43f7d5;
+  --linear-gradient-darker: rgba(58, 54, 242, 1);
+
+  --webkit-scrollbar-thumb-background-color: rgb(54, 54, 54);
+  --webkit-scrollbar-thumb-background-color-hover: rgba(80, 80, 80, 1);
+  --webkit-scrollbar-thumb-background-color-active: rgba(60, 60, 60, 1);
+}
+::-webkit-scrollbar {
+  width: 1em;
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--webkit-scrollbar-thumb-background-color);
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      background-color: var(--webkit-scrollbar-thumb-background-color-hover);
+    }
+    &:active {
+      background-color: var(--webkit-scrollbar-thumb-background-color-active);
+    }
+  }
+}
+::-webkit-scrollbar-track-piece {
+  background-color: var(--background-color-body);
+}
+::selection {
+  background-color: var(--text-selection);
+  color: var(--background-color-body);
+}
+html {
+  min-height: 100%;
+  width: 100vw;
+  position: relative;
+}
+body {
+  box-sizing: border-box;
+  overflow-x: hidden;
+  position: relative;
+  margin: 0px;
+  padding: 0px;
+  width: 100vw;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  font-size: 16px;
+  font-family: sans-serif;
+  background-color: var(--background-color-body);
+  color: var(--text-color-body);
+}
+input,
+button {
+  outline: none;
+  border-style: none;
+}
+a {
+  text-decoration: none;
+  color: var(--text-color-body);
+}
+
+img[src*="https://cdn.000webhost.com/000webhost/logo/footer-powered-by-000webhost-white2.png"]
+{
+  display: none;
+}
+
+// Layout
+@import "./layout/indexLayout";
+
+// Pages
+@import "./pages/portfolio/indexPortfolio";

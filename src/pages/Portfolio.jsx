@@ -1,5 +1,6 @@
 // React
 import React from "react";
+import { Helmet } from "react-helmet";
 
 // Components
 import Header from "../components/Portfolio/Header/Header";
@@ -23,24 +24,33 @@ const Portfolio = ({
   contactRef,
 }) => {
   return (
-    <div className="portfolioLayoutDivision">
-      <SocialMedia></SocialMedia>
-      <div className="portfolioLayoutDivision__content">
-        <Header contactRef={contactRef}></Header>
-        <About aboutRef={aboutRef}></About>
-        <Work workRef={workRef}></Work>
-        <Contact
-          setIsInLayout={setIsInLayout}
-          setBackgroundColor={setBackgroundColor}
-          setTextColor={setTextColor}
-          setTitle={setTitle}
-          setText={setText}
-          setIsInLayoutLoader={setIsInLayoutLoader}
-          contactRef={contactRef}
-        ></Contact>
-        <SocialMediaResponsive></SocialMediaResponsive>
+    <>
+      <Helmet>
+        <title>Portafolio personal - Rodrigo Terán Hernández</title>
+        <meta
+          name="description"
+          content={`Portafolio personal de Rodrigo Terán Hernández`}
+        />
+      </Helmet>
+      <div className="portfolioLayoutDivision">
+        <SocialMedia></SocialMedia>
+        <div className="portfolioLayoutDivision__content">
+          <Header contactRef={contactRef}></Header>
+          <About aboutRef={aboutRef}></About>
+          <Work workRef={workRef}></Work>
+          <Contact
+            setIsInLayout={setIsInLayout}
+            setBackgroundColor={setBackgroundColor}
+            setTextColor={setTextColor}
+            setTitle={setTitle}
+            setText={setText}
+            setIsInLayoutLoader={setIsInLayoutLoader}
+            contactRef={contactRef}
+          ></Contact>
+          <SocialMediaResponsive></SocialMediaResponsive>
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 export default Portfolio;

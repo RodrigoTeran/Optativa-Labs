@@ -12,6 +12,7 @@ import LayoutMsg from "./components/Layout/LayoutMsg";
 import LayoutLoader from "./components/Layout/LayoutLoader";
 
 // Pages
+import Index from "./pages/Index";
 import Portfolio from "./pages/Portfolio";
 
 const App = () => {
@@ -53,6 +54,10 @@ const App = () => {
       <AnimatePresence exitBeforeEnter>
         <Switch location={location} key={location.key}>
           <Route exact path="/">
+            <Index></Index>
+          </Route>
+
+          <Route exact path="/portafolio">
             <Portfolio
               // Layout MSG
               setIsInLayout={setIsLayoutMsgInLayout}

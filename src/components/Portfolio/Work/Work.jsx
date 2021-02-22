@@ -4,6 +4,9 @@ import React, { useRef } from "react";
 // Components
 import Proyect from "./Proyect";
 
+// Framer motion
+import { motion } from "framer-motion";
+
 // Utils for webp support
 import { isWebpSupported } from "react-image-webp/dist/utils";
 
@@ -44,7 +47,11 @@ const Work = ({ workRef }) => {
   );
 
   return (
-    <div className="portfolioWork" ref={workRef}>
+    <motion.div
+      exit={{ opacity: 0, y: 30, transition: { type: "tween", duration: 0.3 } }}
+      className="portfolioWork"
+      ref={workRef}
+    >
       <h2 ref={h2} className={`notAppear`}>
         Proyectos
       </h2>
@@ -88,7 +95,7 @@ const Work = ({ workRef }) => {
           mode="2"
         ></Proyect>
       </div>
-    </div>
+    </motion.div>
   );
 };
 export default Work;

@@ -13,6 +13,11 @@ export const buttonHeaderVariants = {
       damping: 8,
     },
   },
+  exit: {
+    opacity: 0,
+    y: 30,
+    transition: { type: "tween", duration: .3 },
+  },
 };
 export const sentenceVariants = {
   hidden: {
@@ -25,6 +30,11 @@ export const sentenceVariants = {
       staggerChildren: 0.1,
       when: "beforeChildren",
     },
+  },
+  exit: {
+    opacity: 0,
+    y: 30,
+    transition: { type: "tween", duration: .3 },
   },
 };
 
@@ -40,6 +50,11 @@ export const buttonsContainerVariants = {
       when: "beforeChildren",
     },
   },
+  exit: {
+    opacity: 0,
+    y: 30,
+    transition: { type: "tween", duration: .3 },
+  },
 };
 
 export const letterVariants = {
@@ -54,6 +69,11 @@ export const letterVariants = {
     color: "#fff",
     transition: { type: "spring", stiffness: 200 },
   },
+  exit: {
+    opacity: 0,
+    y: 30,
+    transition: { type: "tween", duration: .3 },
+  },
 };
 
 export const imageVariants = {
@@ -63,5 +83,10 @@ export const imageVariants = {
   visible: {
     opacity: 1,
     transition: { type: "tween", delay: 0.5, duration: 1.2 },
+  },
+  exit: {
+    opacity: 0,
+    y: 30,
+    transition: { type: "tween", duration: .3 },
   },
 };

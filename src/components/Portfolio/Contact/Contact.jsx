@@ -4,6 +4,9 @@ import React, { useState, useRef } from "react";
 // Components
 import FormInpuText from "./FormInputText";
 
+// Framer motion
+import { motion } from "framer-motion";
+
 // To send emails
 import emailjs from "emailjs-com";
 
@@ -84,7 +87,11 @@ const Contact = ({
     }
   };
   return (
-    <div className="portfolioContact" ref={contactRef}>
+    <motion.div
+      exit={{ opacity: 0, y: 30, transition: { type: "tween", duration: 0.3 } }}
+      className="portfolioContact"
+      ref={contactRef}
+    >
       <div className="portfolioContact__h2">
         <h2 className={`notAppear`} ref={h2}>
           Contáctame
@@ -122,7 +129,7 @@ const Contact = ({
           Enviar
         </button>
       </form>
-    </div>
+    </motion.div>
   );
 };
 export default Contact;

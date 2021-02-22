@@ -1,6 +1,9 @@
 // React
 import React, { useState, useRef } from "react";
 
+// Framer motion
+import { motion } from "framer-motion";
+
 // For Merge Sort
 import {
   getMergeSortAnimations,
@@ -19,9 +22,7 @@ import {
 // Hooks
 import { useAnimationsScroll } from "../../../hooks/useAnimationsScroll";
 
-const About = ({
-  aboutRef
-}) => {
+const About = ({ aboutRef }) => {
   // Refs for animations scroll
   const h2About = useRef(null);
   const p1About = useRef(null);
@@ -47,7 +48,7 @@ const About = ({
       containerRightSortSelectionAbout,
       containerRightSortActionAbout,
     ],
-    .5,
+    0.5,
     "notAppear"
   );
 
@@ -80,7 +81,11 @@ const About = ({
   };
 
   return (
-    <div className="portfolioAbout" ref={aboutRef}>
+    <motion.div
+      exit={{ opacity: 0, y: 30, transition: { type: "tween", duration: 0.3 } }}
+      className="portfolioAbout"
+      ref={aboutRef}
+    >
       <h2 className={`notAppear`} ref={h2About}>
         Acerca de mí
       </h2>
@@ -99,10 +104,7 @@ const About = ({
             videojuegos, aplicaciones de teléfono, páginas web, servidores y
             más.
           </p>
-          <div
-            className={`portfolioAbout__cards notAppear`}
-            ref={cardsAbout}
-          >
+          <div className={`portfolioAbout__cards notAppear`} ref={cardsAbout}>
             <div className="portfolioAbout__cards__card">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
                 <path d="M384 144c0-44.2-35.8-80-80-80s-80 35.8-80 80c0 36.4 24.3 67.1 57.5 76.8-.6 16.1-4.2 28.5-11 36.9-15.4 19.2-49.3 22.4-85.2 25.7-28.2 2.6-57.4 5.4-81.3 16.9v-144c32.5-10.2 56-40.5 56-76.3 0-44.2-35.8-80-80-80S0 35.8 0 80c0 35.8 23.5 66.1 56 76.3v199.3C23.5 365.9 0 396.2 0 432c0 44.2 35.8 80 80 80s80-35.8 80-80c0-34-21.2-63.1-51.2-74.6 3.1-5.2 7.8-9.8 14.9-13.4 16.2-8.2 40.4-10.4 66.1-12.8 42.2-3.9 90-8.4 118.2-43.4 14-17.4 21.1-39.8 21.6-67.9 31.6-10.8 54.4-40.7 54.4-75.9zM80 64c8.8 0 16 7.2 16 16s-7.2 16-16 16-16-7.2-16-16 7.2-16 16-16zm0 384c-8.8 0-16-7.2-16-16s7.2-16 16-16 16 7.2 16 16-7.2 16-16 16zm224-320c8.8 0 16 7.2 16 16s-7.2 16-16 16-16-7.2-16-16 7.2-16 16-16z" />
@@ -121,10 +123,7 @@ const About = ({
           </div>
         </div>
         <div className="portfolioAbout__container__right">
-          <p
-            className={`notAppear`}
-            ref={pTitleRightAbout}
-          >
+          <p className={`notAppear`} ref={pTitleRightAbout}>
             Algunas tecnologías con las que he estado trabajando recientemente:{" "}
           </p>
           <div className="portfolioAbout__container__right__sort">
@@ -193,7 +192,7 @@ const About = ({
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 export default About;

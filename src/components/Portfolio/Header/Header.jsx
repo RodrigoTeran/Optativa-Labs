@@ -33,6 +33,7 @@ const Header = ({ contactRef }) => {
         <motion.h1
           initial="hidden"
           animate="visible"
+          exit="exit"
           variants={sentenceVariants}
         >
           <div className="portfolioHeader__sentence">
@@ -69,8 +70,12 @@ const Header = ({ contactRef }) => {
         </motion.h1>
         <motion.h2
           initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.4, duration: 0.5 }}
+          animate={{ opacity: 1, transition: { delay: 0.4, duration: 0.5 } }}
+          exit={{
+            opacity: 0,
+            y: 30,
+            transition: { type: "tween", duration: 0.3 },
+          }}
         >
           <ReactTypingEffect
             text={[
@@ -88,6 +93,7 @@ const Header = ({ contactRef }) => {
           variants={buttonsContainerVariants}
           initial="hidden"
           animate="visible"
+          exit="exit"
         >
           <HeaderButton
             onClickFunction={() => {
@@ -108,6 +114,7 @@ const Header = ({ contactRef }) => {
         variants={imageVariants}
         initial="hidden"
         animate="visible"
+        exit="exit"
       >
         <img
           src={`${

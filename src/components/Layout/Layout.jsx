@@ -8,6 +8,9 @@ import { useAnimationBlocks } from "../../hooks/useAnimationBlocks";
 // Framer motion
 import { motion, AnimatePresence } from "framer-motion";
 
+// Functions
+import { randomIntFromInterval } from "../../functions/randomInterval";
+
 const generateListOfBlocks = (howMany) => {
   var array = new Array([]);
   for (var i = 0; i < howMany; i++) {
@@ -28,11 +31,6 @@ const Layout = () => {
 
   // Animate Blocks
   useAnimationBlocks("layoutContainer__block", 3000);
-
-  const randomIntFromInterval = (min, max) => {
-    // min and max included
-    return Math.floor(Math.random() * (max - min + 1) + min);
-  };
 
   return (
     <div className="layoutContainer">

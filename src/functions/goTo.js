@@ -1,4 +1,4 @@
-const getTop = (component) => {
+export const getTop = (component) => {
   // Función que calcula la distancia que existe de un componente y hasta arriba de la página
   return parseInt(
     component.getBoundingClientRect().top + document.scrollingElement.scrollTop

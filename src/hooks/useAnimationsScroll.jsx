@@ -1,12 +1,8 @@
 // React
 import { useLayoutEffect } from "react";
 
-const getTop = (component) => {
-  // Función que calcula la distancia que existe de un componente y hasta arriba de la página
-  return parseInt(
-    component.getBoundingClientRect().top + document.scrollingElement.scrollTop
-  );
-};
+// Functions
+import { getTop } from "../functions/goTo";
 
 export const useAnimationsScroll = (
   listaComponentes,

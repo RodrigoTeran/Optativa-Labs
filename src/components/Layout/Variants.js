@@ -1,13 +1,14 @@
 export const containerNavbarVariants = {
   hidden: {
-    opacity: 1,
+    opacity: 0,
   },
   visible: {
     opacity: 1,
     transition: {
-      delay: 0.1,
+      delay: 0.3,
       staggerChildren: 0.1,
       when: "beforeChildren",
+      duration: 0.5
     },
   },
   exit: {

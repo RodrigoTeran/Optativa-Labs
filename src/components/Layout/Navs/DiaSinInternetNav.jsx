@@ -106,7 +106,13 @@ const DiaSinInternetNav = ({
           </div>
         </div>
       </motion.div>
-      <div className={`navbarBlur ${openNav ? "" : "close"}`}></div>
+      <motion.div
+        variants={containerNavbarVariants}
+        initial="hidden"
+        animate="visible"
+        exit="exit"
+        className={`navbarBlur ${openNav ? "" : "close"}`}
+      ></motion.div>
     </>
   );
 };

@@ -23,11 +23,16 @@ const Layout = () => {
   // Generate List of all blocks
   const [arrayBlocksIndexPage, setArrayBlocksIndexPage] = useState([]);
   useEffect(() => {
-    setArrayBlocksIndexPage(generateListOfBlocks(200));
+    setArrayBlocksIndexPage(generateListOfBlocks(100));
   }, []);
 
   // Animate Blocks
   useAnimationBlocks("layoutContainer__block", 3000);
+
+  const randomIntFromInterval = (min, max) => {
+    // min and max included
+    return Math.floor(Math.random() * (max - min + 1) + min);
+  };
 
   return (
     <div className="layoutContainer">
@@ -74,27 +79,39 @@ const Layout = () => {
             ></motion.div>
           </>
         ) : (
-          <>
+          <motion.div
+            initial={{
+              opacity: 0,
+            }}
+            animate={{
+              opacity: 1,
+              transition: { type: "tween", duration: 0.3 },
+            }}
+            exit={{
+              opacity: 0,
+              transition: { type: "tween", duration: 0.3 },
+            }}
+            key="4"
+            className="layoutContainer"
+          >
             {arrayBlocksIndexPage.map((_block, index) => {
               return (
-                <motion.div
-                  initial={{
-                    opacity: 0,
-                  }}
-                  animate={{
-                    opacity: 1,
-                    transition: { type: "tween", duration: .3, delay: .3 },
-                  }}
-                  exit={{
-                    opacity: 0,
-                    transition: { type: "tween", duration: 0.3 },
-                  }}
+                <div
                   key={index}
                   className="layoutContainer__block"
-                ></motion.div>
+                  style={{
+                    transform: `translateX(${randomIntFromInterval(
+                      -window.innerWidth / 2,
+                      window.innerWidth / 2
+                    )}px) translateY(${randomIntFromInterval(
+                      -window.innerHeight / 2,
+                      window.innerHeight / 2
+                    )}px) scale(${randomIntFromInterval(1, 6)})`,
+                  }}
+                ></div>
               );
             })}
-          </>
+          </motion.div>
         )}
       </AnimatePresence>
     </div>

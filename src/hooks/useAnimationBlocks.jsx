@@ -1,11 +1,12 @@
-import { useLayoutEffect, useCallback } from "react";
+import { useLayoutEffect } from "react";
 
 export const useAnimationBlocks = (classNameBlocks, intervalFromUser) => {
   const randomIntFromInterval = (min, max) => {
     // min and max included
     return Math.floor(Math.random() * (max - min + 1) + min);
   };
-  const animateBlocks = useCallback(() => {
+  const animateBlocks = () => {
+    console.log("animacion hecha");
     const blocks = document.getElementsByClassName(classNameBlocks);
     for (var i = 0; i < blocks.length; i++) {
       const x = randomIntFromInterval(
@@ -17,17 +18,18 @@ export const useAnimationBlocks = (classNameBlocks, intervalFromUser) => {
         window.innerHeight / 2
       );
       const scale = randomIntFromInterval(1, 6);
+      console.log(`x: ${x}`);
+      console.log(`y: ${y}`);
       blocks[
         i
       ].style.transform = `translateX(${x}px) translateY(${y}px) scale(${scale})`;
     }
-  });
+  };
 
   useLayoutEffect(() => {
-    animateBlocks();
     const interval = setInterval(() => {
       animateBlocks();
     }, intervalFromUser);
     return () => clearInterval(interval);
-  }, [animateBlocks, intervalFromUser]);
+  });
 };

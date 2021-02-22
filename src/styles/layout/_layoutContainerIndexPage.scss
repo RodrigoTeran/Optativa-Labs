@@ -1,0 +1,10 @@
+.layoutContainer__block {
+  background-color: var(--background-color-blocks-index);
+  width: 50px;
+  height: 100px;
+  position: absolute;
+  top: 50vh;
+  left: 50vw;
+  box-shadow: 0px 0px 3px 0px var(--box-shadow-color-blocks-index);
+  transition: transform ease-in-out 1s;
+}

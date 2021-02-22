@@ -2,9 +2,6 @@
 import React from "react";
 import { Helmet } from "react-helmet";
 
-// Framer motion
-import { motion } from "framer-motion";
-
 // Components
 import IndexComponent from "../components/Index/Index";
 
@@ -18,9 +15,7 @@ const Index = () => {
           content={`Laboratorios de Optativa Prepa Tec`}
         />
       </Helmet>
-      <motion.div exit={{ opacity: 0, transition: { duration: 0 } }}>
-        <IndexComponent></IndexComponent>
-      </motion.div>
+      <IndexComponent></IndexComponent>
     </>
   );
 };

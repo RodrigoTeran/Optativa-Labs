@@ -13,7 +13,7 @@ export const containerNavbarVariants = {
   exit: {
     opacity: 0,
     y: 30,
-    transition: { type: "tween", duration: .3 },
+    transition: { type: "tween", duration: 0.3 },
   },
 };
 export const elementNavbarVariants = {
@@ -28,6 +28,6 @@ export const elementNavbarVariants = {
   },
   exit: {
     opacity: 0,
-    transition: { type: "tween", duration: .3 },
+    transition: { type: "tween", duration: 0.3 },
   },
 };

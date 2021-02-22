@@ -1,13 +1,33 @@
 // React
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
+
+// Hooks
+import { useAnimationBlocks } from "../../hooks/useAnimationBlocks";
 
 // Framer motion
 import { motion, AnimatePresence } from "framer-motion";
 
+const generateListOfBlocks = (howMany) => {
+  var array = new Array([]);
+  for (var i = 0; i < howMany; i++) {
+    array.push(i);
+  }
+  return array;
+};
+
 const Layout = () => {
   // Location hook to know background layout
   const location = useLocation();
+
+  // Generate List of all blocks
+  const [arrayBlocksIndexPage, setArrayBlocksIndexPage] = useState([]);
+  useEffect(() => {
+    setArrayBlocksIndexPage(generateListOfBlocks(200));
+  }, []);
+
+  // Animate Blocks
+  useAnimationBlocks("layoutContainer__block", 3000);
 
   return (
     <div className="layoutContainer">
@@ -53,7 +73,29 @@ const Layout = () => {
               className="layoutContainer__circle"
             ></motion.div>
           </>
-        ) : null}
+        ) : (
+          <>
+            {arrayBlocksIndexPage.map((_block, index) => {
+              return (
+                <motion.div
+                  initial={{
+                    opacity: 0,
+                  }}
+                  animate={{
+                    opacity: 1,
+                    transition: { type: "tween", duration: .3, delay: .3 },
+                  }}
+                  exit={{
+                    opacity: 0,
+                    transition: { type: "tween", duration: 0.3 },
+                  }}
+                  key={index}
+                  className="layoutContainer__block"
+                ></motion.div>
+              );
+            })}
+          </>
+        )}
       </AnimatePresence>
     </div>
   );

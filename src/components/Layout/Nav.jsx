@@ -132,7 +132,12 @@ const Nav = ({ aboutRef, workRef, contactRef }) => {
                 </svg>
               </div>
 
-              <div className="navbar__responsive__container__text">
+              <div
+                className="navbar__responsive__container__text"
+                onClick={() => {
+                  setResponsiveNav(false);
+                }}
+              >
                 <Link to="/">
                   <span>
                     <svg

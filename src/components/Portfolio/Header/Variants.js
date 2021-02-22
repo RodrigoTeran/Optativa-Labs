@@ -1,3 +1,5 @@
+import { PRIMARY_COLOR } from "../../../config";
+
 export const buttonHeaderVariants = {
   hidden: {
     y: 150,
@@ -16,7 +18,7 @@ export const buttonHeaderVariants = {
   exit: {
     opacity: 0,
     y: 30,
-    transition: { type: "tween", duration: .3 },
+    transition: { type: "tween", duration: 0.3 },
   },
 };
 export const sentenceVariants = {
@@ -34,7 +36,7 @@ export const sentenceVariants = {
   exit: {
     opacity: 0,
     y: 30,
-    transition: { type: "tween", duration: .3 },
+    transition: { type: "tween", duration: 0.3 },
   },
 };
 
@@ -53,7 +55,7 @@ export const buttonsContainerVariants = {
   exit: {
     opacity: 0,
     y: 30,
-    transition: { type: "tween", duration: .3 },
+    transition: { type: "tween", duration: 0.3 },
   },
 };
 
@@ -61,7 +63,7 @@ export const letterVariants = {
   hidden: {
     scaleY: 0,
     originY: "100%",
-    color: "#43f7d5",
+    color: PRIMARY_COLOR,
   },
   visible: {
     scaleY: 1,
@@ -72,7 +74,7 @@ export const letterVariants = {
   exit: {
     opacity: 0,
     y: 30,
-    transition: { type: "tween", duration: .3 },
+    transition: { type: "tween", duration: 0.3 },
   },
 };
 
@@ -87,6 +89,6 @@ export const imageVariants = {
   exit: {
     opacity: 0,
     y: 30,
-    transition: { type: "tween", duration: .3 },
+    transition: { type: "tween", duration: 0.3 },
   },
 };

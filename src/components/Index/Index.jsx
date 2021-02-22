@@ -9,6 +9,15 @@ const Index = () => {
   return (
     <motion.div
       className="indexPage"
+      initial={{
+        y: 30,
+        opacity: 0,
+      }}
+      animate={{
+        y: 0,
+        opacity: 1,
+        transition: { type: "string", duration: 0.5, stiffness: 200 },
+      }}
       exit={{ opacity: 0, y: 30, transition: { type: "tween", duration: 0.3 } }}
     >
       <h1>LABORATORIOS DE OPTATIVA</h1>
@@ -16,14 +25,14 @@ const Index = () => {
         <li>
           <h2>
             <Link to="/portafolio">
-              <div>Lab - 1: Portafolio</div>
+              <div>Lab 1: Portafolio</div>
             </Link>
           </h2>
         </li>
         <li>
           <h2>
-            <Link to="/portafolio">
-              <div>Lab - 2: Un día sin Internet</div>
+            <Link to="/dia-sin-internet">
+              <div>Lab 2: Un día sin Internet</div>
             </Link>
           </h2>
         </li>

@@ -17,7 +17,7 @@
     font-weight: 100;
     text-align: center;
     a {
-      transition: color ease-in-out .3s;
+      transition: color ease-in-out 0.3s;
       @media (hover: hover) and (pointer: fine) {
         &:hover {
           color: var(--text-selection);
@@ -33,10 +33,11 @@
     li {
       margin: 5px 0px;
       width: fit-content;
-      transition: color ease-in-out .3s;
+      transition: color ease-in-out 0.3s, transform ease-in-out 0.3s;
       @media (hover: hover) and (pointer: fine) {
         &:hover {
           color: var(--text-selection);
+          transform: scale(1.2);
         }
       }
     }

@@ -14,6 +14,7 @@ import LayoutLoader from "./components/Layout/LayoutLoader";
 // Pages
 import Index from "./pages/Index";
 import Portfolio from "./pages/Portfolio";
+import DiaSinInternet from "./pages/DiaSinInternet";
 
 const App = () => {
   // LayoutMsg
@@ -72,6 +73,11 @@ const App = () => {
               contactRef={contactRef}
             ></Portfolio>
           </Route>
+
+          <Route exact path="/dia-sin-internet">
+            <DiaSinInternet></DiaSinInternet>
+          </Route>
+
           <Route path="/">
             <Redirect to="/"></Redirect>
           </Route>

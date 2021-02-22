@@ -5,10 +5,12 @@ const getTop = (component) => {
   );
 };
 export const goto = (_ref) => {
-  const top = getTop(_ref.current) - 100;
-  window.scroll({
-    top: top,
-    left: 0,
-    behavior: "smooth",
-  });
+  try {
+    const top = getTop(_ref.current) - 100;
+    window.scroll({
+      top: top,
+      left: 0,
+      behavior: "smooth",
+    });
+  } catch {}
 };

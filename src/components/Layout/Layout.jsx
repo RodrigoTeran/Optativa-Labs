@@ -32,7 +32,7 @@ const Layout = () => {
   return (
     <div className="layoutContainer">
       <AnimatePresence exitBeforeEnter>
-        {location.pathname === "/portafolio" ? (
+        {location.pathname !== "/" ? (
           <>
             <motion.div
               initial={{

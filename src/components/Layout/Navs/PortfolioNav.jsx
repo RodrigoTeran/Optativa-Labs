@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 
 // Variants
-import { containerNavbarVariants, elementNavbarVariants } from "../Variants";
+import { containerNavbarVariants, elementNavbarVariants, containerNavbarBlurVariants } from "../Variants";
 
 const PortfolioNav = ({
   openNav,
@@ -168,7 +168,7 @@ const PortfolioNav = ({
         </div>
       </motion.div>
       <motion.div
-        variants={containerNavbarVariants}
+        variants={containerNavbarBlurVariants}
         initial="hidden"
         animate="visible"
         exit="exit"

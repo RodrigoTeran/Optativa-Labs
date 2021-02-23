@@ -8,7 +8,26 @@ export const containerNavbarVariants = {
       delay: 0.3,
       staggerChildren: 0.1,
       when: "beforeChildren",
-      duration: 0.5
+      duration: 0.5,
+    },
+  },
+  exit: {
+    opacity: 0,
+    y: 30,
+    transition: { type: "tween", duration: 0.3 },
+  },
+};
+export const containerNavbarBlurVariants = {
+  hidden: {
+    opacity: 0,
+  },
+  visible: {
+    opacity: 0.9,
+    transition: {
+      delay: 0.3,
+      staggerChildren: 0.1,
+      when: "beforeChildren",
+      duration: 0.5,
     },
   },
   exit: {

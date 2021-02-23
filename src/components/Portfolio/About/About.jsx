@@ -72,7 +72,7 @@ const About = ({ aboutRef }) => {
         setTimeout(() => {
           const [barOneIdx, newWidth] = animations[i];
           const barOneStyle = arrayBars[barOneIdx].style;
-          barOneStyle.width = `${newWidth}%`;
+          barOneStyle.width = `${newWidth - 8}%`;
           setIsSorted(true);
         }, i * ANIMATION_SPEED_MS);
         setIsSorted(true);

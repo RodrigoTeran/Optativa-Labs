@@ -5,3 +5,8 @@ export const BACKGROUND_COLOR_lAYOUT_MSG_ERROR = "rgb(241, 160, 160)";
 export const BACKGROUND_COLOR_lAYOUT_MSG_SUCCESS = "rgb(148, 231, 159)";
 export const TEXT_COLOR_lAYOUT_MSG_ERROR = "rgb(99,9,27)";
 export const TEXT_COLOR_lAYOUT_MSG_SUCCESS = "rgb(11, 65, 27)";
+export const variables = {
+  REACT_APP_USER_ID: process.env.REACT_APP_SERVICE_ID,
+  REACT_APP_SERVICE_ID: process.env.REACT_APP_TEMPLATE_ID,
+  REACT_APP_TEMPLATE_ID: process.env.REACT_APP_USER_ID,
+};

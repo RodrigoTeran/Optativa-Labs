@@ -1,0 +1,82 @@
+.dayWithoutComputer {
+  &__header {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    h1 {
+      margin: 20px 0px 10px 0px;
+      padding: 0px 20px;
+      text-align: center;
+    }
+    h2 {
+      margin: 0px 0px 30px 0px;
+      padding: 0px 20px;
+      text-align: center;
+      font-weight: 100;
+      font-family: "Fira Code";
+      font-size: 1rem;
+    }
+    button {
+      background-color: transparent;
+      width: 40px;
+      height: 40px;
+      border: 1px solid var(--text-color-body);
+      // transform: rotateZ(45deg);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: background-color ease-in-out 0.3s;
+      cursor: pointer;
+      svg {
+        width: 90%;
+        height: 90%;
+        fill: var(--text-color-body);
+        transition: fill ease-in-out 0.3s;
+      }
+      @media (hover: hover) and (pointer: fine) {
+        &:hover {
+          background-color: var(--text-color-body);
+          svg {
+            fill: var(--text-color-body-2);
+          }
+        }
+      }
+    }
+    span {
+      margin: 15px 0px 0px 0px;
+      text-transform: uppercase;
+    }
+    &__svgContainer {
+      svg {
+        width: 20vw;
+        height: 20vw;
+        fill: var(--webkit-scrollbar-thumb-background-color-hover);
+        animation-name: animaDayWithoutComputerSvg;
+        animation-duration: 1s;
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        transition: width ease-in-out 0.3s, height ease-in-out 0.3s;
+        @media screen and (max-width: 1000px) {
+          width: 40vw;
+          height: 40vw;
+        }
+        @media screen and (max-width: 600px) {
+          width: 60vw;
+          height: 60vw;
+        }
+      }
+    }
+  }
+}
+@keyframes animaDayWithoutComputerSvg {
+  0% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
+}

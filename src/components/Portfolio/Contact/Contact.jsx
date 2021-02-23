@@ -19,6 +19,7 @@ import {
   BACKGROUND_COLOR_lAYOUT_MSG_SUCCESS,
   TEXT_COLOR_lAYOUT_MSG_ERROR,
   TEXT_COLOR_lAYOUT_MSG_SUCCESS,
+  variables
 } from "../../../config";
 
 const Contact = ({
@@ -61,10 +62,10 @@ const Contact = ({
     } else {
       emailjs
         .sendForm(
-          process.env.REACT_APP_SERVICE_ID,
-          process.env.REACT_APP_TEMPLATE_ID,
+          variables.REACT_APP_SERVICE_ID,
+          variables.REACT_APP_TEMPLATE_ID,
           e.target,
-          process.env.REACT_APP_USER_ID
+          variables.REACT_APP_USER_ID
         )
         .then(
           (result) => {

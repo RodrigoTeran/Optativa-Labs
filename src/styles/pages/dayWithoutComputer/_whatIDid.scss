@@ -14,6 +14,7 @@
     height: 200px;
     position: relative;
     max-width: 1200px;
+    transition: opacity ease-in-out 0.5s, transform ease-in-out 0.5s;
     &__svg {
       position: absolute;
       top: calc(50% - 15px);
@@ -25,9 +26,9 @@
       animation-name: anima_street_dog;
       animation-timing-function: linear;
       animation-fill-mode: forwards;
-      animation-direction: normal;
+      animation-direction: alternate;
       animation-iteration-count: infinite;
-      animation-duration: 10s;
+      animation-duration: .5s;
 
       svg {
         fill: var(--text-color-body);
@@ -93,64 +94,7 @@
   0% {
     transform: rotateZ(-10deg);
   }
-  5% {
-    transform: rotateZ(10deg);
-  }
-  10% {
-    transform: rotateZ(-10deg);
-  }
-  15% {
-    transform: rotateZ(10deg);
-  }
-  20% {
-    transform: rotateZ(-10deg);
-  }
-  25% {
-    transform: rotateZ(10deg);
-  }
-  30% {
-    transform: rotateZ(-10deg);
-  }
-  35% {
-    transform: rotateZ(10deg);
-  }
-  40% {
-    transform: rotateZ(-10deg);
-  }
-  45% {
-    transform: rotateZ(10deg);
-  }
-  50% {
-    transform: rotateZ(-10deg);
-  }
-  55% {
-    transform: rotateZ(10deg);
-  }
-  60% {
-    transform: rotateZ(-10deg);
-  }
-  65% {
-    transform: rotateZ(10deg);
-  }
-  70% {
-    transform: rotateZ(-10deg);
-  }
-  75% {
-    transform: rotateZ(10deg);
-  }
-  80% {
-    transform: rotateZ(-10deg);
-  }
-  85% {
-    transform: rotateZ(10deg);
-  }
-  90% {
-    transform: rotateZ(-10deg);
-  }
-  95% {
-    transform: rotateZ(10deg);
-  }
   100% {
-    transform: rotateZ(-10deg);
+    transform: rotateZ(10deg);
   }
 }

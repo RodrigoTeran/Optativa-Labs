@@ -4,6 +4,9 @@ import React, { useRef } from "react";
 // Components
 import Street from "./Street";
 
+// Utils for webp support
+import { isWebpSupported } from "react-image-webp/dist/utils";
+
 // Hooks
 import { useAnimationsScroll } from "../../hooks/useAnimationsScroll";
 
@@ -45,7 +48,7 @@ const WhatIDid = ({ whatIDid }) => {
         <img
           className="notAppear"
           ref={fredaRef}
-          src="/images/freda.jpeg"
+          src={isWebpSupported ? "/images/freda.webp" : "/images/freda.jpeg"}
           alt="Fredita"
         />
         <div className="whatIDid__info__dog__content">

@@ -53,7 +53,7 @@ const WhyThisDay = ({ whyThisDayRef }) => {
                 Para descansar más
               </li>
               <li ref={li6Ref} className="notAppear">
-                Para hacer nuestros hobbies
+                Para hacer hobbies
               </li>
             </ul>
           </div>

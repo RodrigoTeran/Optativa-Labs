@@ -4,7 +4,7 @@
   display: flex;
   align-items: center;
   flex-direction: column;
-  padding: 100px 0px;
+  padding: 100px 0px 200px 0px;
   display: flex;
   h2 {
     font-size: 2.5rem;
@@ -12,6 +12,7 @@
     align-self: flex-start;
     position: relative;
     width: fit-content;
+    transition: opacity ease-in-out 0.5s, transform ease-in-out 0.5s;
     &::after {
       position: absolute;
       content: "";
@@ -39,9 +40,10 @@
       display: flex;
       flex-direction: column;
       justify-content: space-around;
+      align-items: flex-start;
       li {
         font-size: 1.5rem;
-        transition: transform ease-in-out 0.3s, color ease-in-out 0.3s;
+        transition: transform ease-in-out 0.3s, color ease-in-out 0.3s, opacity ease-in-out 0.5s;
         cursor: default;
         @media (hover: hover) and (pointer: fine) {
           &:hover {
@@ -72,6 +74,8 @@
     &__column {
       width: 100%;
       ul {
+        padding: 0;
+        align-items: center;
         li {
           font-size: 1.2rem;
           margin: 10px 0px;

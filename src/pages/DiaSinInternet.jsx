@@ -5,7 +5,7 @@ import { Helmet } from "react-helmet";
 // Components
 import DiaSinInternetComponent from "../components/DiaSinInternet/DiaSinInternet";
 
-const DiaSinInternet = ({ whyThisDayRef }) => {
+const DiaSinInternet = ({ whyThisDayRef, whatIDid }) => {
   return (
     <>
       <Helmet>
@@ -17,6 +17,7 @@ const DiaSinInternet = ({ whyThisDayRef }) => {
       </Helmet>
       <DiaSinInternetComponent
         whyThisDayRef={whyThisDayRef}
+        whatIDid={whatIDid}
       ></DiaSinInternetComponent>
     </>
   );

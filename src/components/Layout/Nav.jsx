@@ -15,7 +15,7 @@ import { useAnimatedNav } from "../../hooks/useAnimatedNav";
 import PortfolioNav from "./Navs/PortfolioNav";
 import DiaSinInternetNav from "./Navs/DiaSinInternetNav";
 
-const Nav = ({ aboutRef, workRef, contactRef, whyThisDayRef }) => {
+const Nav = ({ aboutRef, workRef, contactRef, whyThisDayRef, whatIDid }) => {
   const [responsiveNav, setResponsiveNav] = useState(false);
   const openNav = useAnimatedNav(10, 50);
 
@@ -54,6 +54,7 @@ const Nav = ({ aboutRef, workRef, contactRef, whyThisDayRef }) => {
         <DiaSinInternetNav
           openNav={openNav}
           whyThisDayRef={whyThisDayRef}
+          whatIDid={whatIDid}
           responsiveNav={responsiveNav}
           _goto={_goto}
           setResponsiveNav={setResponsiveNav}

@@ -1,0 +1,45 @@
+.street {
+  background-color: var(--street-color);
+  height: 100px;
+  display: flex;
+  align-items: center;
+  animation-name: anima_street;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+  animation-direction: normal;
+  animation-iteration-count: infinite;
+  animation-duration: 10s;
+
+  transform: translateX(-50%);
+  &__line {
+    width: 40px;
+    height: 10px;
+    background-color: var(--text-color-body-2);
+    margin: 0px 20px;
+  }
+  &__tree {
+    position: relative;
+    background-color: var(--brown-tree);
+    width: 25px;
+    height: 45px;
+    transform: translateY(calc(-150% - 5px));
+    &::after {
+      position: absolute;
+      content: "";
+      z-index: 1;
+      width: 50px;
+      height: 50px;
+      background-color: var(--green-tree);
+      top: -45px;
+      left: -12.5px;
+    }
+  }
+}
+@keyframes anima_street {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}

@@ -1,0 +1,156 @@
+.whatIDid {
+  width: 80%;
+  margin: 0 0 0 10%;
+  min-height: 500px;
+  display: flex;
+  flex-direction: column;
+  padding: 0px 0px 100px 0px;
+  align-items: center;
+  &__info {
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    overflow: hidden;
+    height: 200px;
+    position: relative;
+    max-width: 1200px;
+    &__svg {
+      position: absolute;
+      top: calc(50% - 15px);
+      left: 30%;
+      width: 60px;
+      height: 60px;
+      z-index: 1;
+
+      animation-name: anima_street_dog;
+      animation-timing-function: linear;
+      animation-fill-mode: forwards;
+      animation-direction: normal;
+      animation-iteration-count: infinite;
+      animation-duration: 10s;
+
+      svg {
+        fill: var(--text-color-body);
+        transition: fill ease-in-out 0.3s;
+      }
+
+      &::after {
+        position: absolute;
+        content: "Woof!";
+        top: -30px;
+        left: 30;
+        background-color: var(--text-color-body);
+        color: var(--text-color-body-2);
+        padding: 10px;
+        border-radius: 10px;
+        z-index: 1;
+        opacity: 0;
+        transition: opacity ease-in-out 0.3s;
+      }
+
+      @media (hover: hover) and (pointer: fine) {
+        &:hover {
+          svg {
+            fill: var(--brown-tree);
+          }
+          &::after {
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+  h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    align-self: flex-end;
+    position: relative;
+    width: fit-content;
+    transition: opacity ease-in-out 0.5s, transform ease-in-out 0.5s;
+    &::after {
+      position: absolute;
+      content: "";
+      z-index: 1;
+      width: 100px;
+      top: calc(50% - 1.5px);
+      height: 3px;
+      width: 300px;
+      left: -320px;
+      background-color: var(--webkit-scrollbar-thumb-background-color);
+    }
+  }
+
+  @media screen and (max-width: 870px) {
+    h2 {
+      align-self: center;
+      &::after {
+        display: none;
+      }
+    }
+  }
+}
+@keyframes anima_street_dog {
+  0% {
+    transform: rotateZ(-10deg);
+  }
+  5% {
+    transform: rotateZ(10deg);
+  }
+  10% {
+    transform: rotateZ(-10deg);
+  }
+  15% {
+    transform: rotateZ(10deg);
+  }
+  20% {
+    transform: rotateZ(-10deg);
+  }
+  25% {
+    transform: rotateZ(10deg);
+  }
+  30% {
+    transform: rotateZ(-10deg);
+  }
+  35% {
+    transform: rotateZ(10deg);
+  }
+  40% {
+    transform: rotateZ(-10deg);
+  }
+  45% {
+    transform: rotateZ(10deg);
+  }
+  50% {
+    transform: rotateZ(-10deg);
+  }
+  55% {
+    transform: rotateZ(10deg);
+  }
+  60% {
+    transform: rotateZ(-10deg);
+  }
+  65% {
+    transform: rotateZ(10deg);
+  }
+  70% {
+    transform: rotateZ(-10deg);
+  }
+  75% {
+    transform: rotateZ(10deg);
+  }
+  80% {
+    transform: rotateZ(-10deg);
+  }
+  85% {
+    transform: rotateZ(10deg);
+  }
+  90% {
+    transform: rotateZ(-10deg);
+  }
+  95% {
+    transform: rotateZ(10deg);
+  }
+  100% {
+    transform: rotateZ(-10deg);
+  }
+}

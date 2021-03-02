@@ -37,6 +37,7 @@ const App = () => {
 
   // Lab 2 page
   const whyThisDayRef = useRef(null);
+  const whatIDid = useRef(null);
 
   return (
     <>
@@ -47,6 +48,7 @@ const App = () => {
         workRef={workRef}
         contactRef={contactRef}
         whyThisDayRef={whyThisDayRef}
+        whatIDid={whatIDid}
       ></Nav>
       <LayoutMsg
         isInLayout={isLayoutMsgInLayout}
@@ -83,6 +85,7 @@ const App = () => {
             <DiaSinInternet
               // Refs
               whyThisDayRef={whyThisDayRef}
+              whatIDid={whatIDid}
             ></DiaSinInternet>
           </Route>
 

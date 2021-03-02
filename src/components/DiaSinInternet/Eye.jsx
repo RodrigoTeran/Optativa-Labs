@@ -8,13 +8,19 @@ import {
   calculateDistanceY,
 } from "../../functions/distances";
 
+// Hooks
+import { useAnimationsScroll } from "../../hooks/useAnimationsScroll";
+
 const Eye = () => {
   // Ref of pupile
+  const eye = useRef(null);
   const pupile = useRef(null);
 
   // Pupiles state
   const [pupileX, setPupileX] = useState(0);
   const [pupileY, setPupileY] = useState(0);
+
+  useAnimationsScroll([eye], 0.5, "notAppear");
 
   useEffect(() => {
     window.addEventListener("mousemove", handleMouseMove);
@@ -44,7 +50,7 @@ const Eye = () => {
     handlePupileMovement(pupile.current, mX, mY, distance);
   };
   return (
-    <div className="whyThisDay__eye__relative">
+    <div ref={eye} className="whyThisDay__eye__relative notAppear">
       <div className="whyThisDay__eye"></div>
       <div
         className="whyThisDay__eye__pupile"

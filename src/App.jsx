@@ -34,6 +34,10 @@ const App = () => {
   const aboutRef = useRef(null);
   const workRef = useRef(null);
   const contactRef = useRef(null);
+
+  // Lab 2 page
+  const whyThisDayRef = useRef(null);
+
   return (
     <>
       <Layout></Layout>
@@ -42,6 +46,7 @@ const App = () => {
         aboutRef={aboutRef}
         workRef={workRef}
         contactRef={contactRef}
+        whyThisDayRef={whyThisDayRef}
       ></Nav>
       <LayoutMsg
         isInLayout={isLayoutMsgInLayout}
@@ -75,7 +80,10 @@ const App = () => {
           </Route>
 
           <Route exact path="/dia-sin-internet">
-            <DiaSinInternet></DiaSinInternet>
+            <DiaSinInternet
+              // Refs
+              whyThisDayRef={whyThisDayRef}
+            ></DiaSinInternet>
           </Route>
 
           <Route path="/">

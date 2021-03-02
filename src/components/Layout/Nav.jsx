@@ -15,7 +15,7 @@ import { useAnimatedNav } from "../../hooks/useAnimatedNav";
 import PortfolioNav from "./Navs/PortfolioNav";
 import DiaSinInternetNav from "./Navs/DiaSinInternetNav";
 
-const Nav = ({ aboutRef, workRef, contactRef }) => {
+const Nav = ({ aboutRef, workRef, contactRef, whyThisDayRef }) => {
   const [responsiveNav, setResponsiveNav] = useState(false);
   const openNav = useAnimatedNav(10, 50);
 
@@ -53,7 +53,7 @@ const Nav = ({ aboutRef, workRef, contactRef }) => {
       ) : location.pathname === "/dia-sin-internet" ? (
         <DiaSinInternetNav
           openNav={openNav}
-          aboutRef={aboutRef}
+          whyThisDayRef={whyThisDayRef}
           responsiveNav={responsiveNav}
           _goto={_goto}
           setResponsiveNav={setResponsiveNav}

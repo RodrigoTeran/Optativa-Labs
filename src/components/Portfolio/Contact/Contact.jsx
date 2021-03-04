@@ -77,6 +77,7 @@ const Contact = ({
             setTextColor(TEXT_COLOR_lAYOUT_MSG_SUCCESS);
           },
           (error) => {
+            console.log(error);
             setIsInLayoutLoader(false);
             setIsInLayout(true);
             setBackgroundColor(BACKGROUND_COLOR_lAYOUT_MSG_ERROR);

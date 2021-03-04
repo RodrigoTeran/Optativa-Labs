@@ -14,6 +14,7 @@ import { useAnimatedNav } from "../../hooks/useAnimatedNav";
 // Navs
 import PortfolioNav from "./Navs/PortfolioNav";
 import DiaSinInternetNav from "./Navs/DiaSinInternetNav";
+import IntegralesNav from "./Navs/IntegralesNav";
 
 const Nav = ({ aboutRef, workRef, contactRef, whyThisDayRef, whatIDid }) => {
   const [responsiveNav, setResponsiveNav] = useState(false);
@@ -59,6 +60,13 @@ const Nav = ({ aboutRef, workRef, contactRef, whyThisDayRef, whatIDid }) => {
           _goto={_goto}
           setResponsiveNav={setResponsiveNav}
         ></DiaSinInternetNav>
+      ) : location.pathname === "/integrales" ? (
+        <IntegralesNav
+          openNav={openNav}
+          responsiveNav={responsiveNav}
+          // _goto={_goto}
+          setResponsiveNav={setResponsiveNav}
+        ></IntegralesNav>
       ) : null}
     </AnimatePresence>
   );

@@ -36,6 +36,13 @@ const Index = () => {
             </Link>
           </h2>
         </li>
+        <li>
+          <h2>
+            <Link to="/integrales">
+              <div>Lab 3: Sólidos de Revolución</div>
+            </Link>
+          </h2>
+        </li>
       </ul>
     </motion.div>
   );

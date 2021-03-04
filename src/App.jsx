@@ -15,6 +15,7 @@ import LayoutLoader from "./components/Layout/LayoutLoader";
 import Index from "./pages/Index";
 import Portfolio from "./pages/Portfolio";
 import DiaSinInternet from "./pages/DiaSinInternet";
+import Integrals from "./pages/Integrals";
 
 const App = () => {
   // LayoutMsg
@@ -87,6 +88,10 @@ const App = () => {
               whyThisDayRef={whyThisDayRef}
               whatIDid={whatIDid}
             ></DiaSinInternet>
+          </Route>
+
+          <Route exact path="/integrales">
+            <Integrals></Integrals>
           </Route>
 
           <Route path="/">

@@ -53,7 +53,7 @@
         width: 20vw;
         height: 20vw;
         fill: var(--webkit-scrollbar-thumb-background-color-hover);
-        animation-name: animaDayWithoutComputerSvg;
+        animation-name: anima_day_without_computer_svg;
         animation-duration: 1s;
         animation-timing-function: ease-in-out;
         animation-iteration-count: infinite;
@@ -71,7 +71,7 @@
     }
   }
 }
-@keyframes animaDayWithoutComputerSvg {
+@keyframes anima_day_without_computer_svg {
   0% {
     transform: translateY(10px);
   }

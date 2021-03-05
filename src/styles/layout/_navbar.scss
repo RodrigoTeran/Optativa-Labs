@@ -40,6 +40,12 @@
       }
       margin: 0px 10px 0px 0px;
     }
+    &__white {
+      font-weight: bold;
+      a {
+        font-weight: bold;
+      }
+    }
     &::after {
       content: "";
       position: absolute;
@@ -106,7 +112,8 @@
           height: 35px;
         }
       }
-      &__text, a {
+      &__text,
+      a {
         display: flex;
         font-size: 10vw;
         text-align: center;

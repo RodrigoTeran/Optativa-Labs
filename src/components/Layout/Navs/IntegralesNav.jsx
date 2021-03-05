@@ -9,7 +9,7 @@ import { motion } from "framer-motion";
 import {
   containerNavbarVariants,
   elementNavbarVariants,
-  containerNavbarBlurVariants,
+  containerNavbarBlurWhiteVariants,
 } from "../Variants";
 
 const IntegralesNav = ({
@@ -29,7 +29,10 @@ const IntegralesNav = ({
         animate="visible"
         exit="exit"
       >
-        <motion.div className="navbar__text" variants={elementNavbarVariants}>
+        <motion.div
+          className="navbar__text navbar__text__white"
+          variants={elementNavbarVariants}
+        >
           <Link to="/">
             <span>
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
@@ -40,11 +43,9 @@ const IntegralesNav = ({
           </Link>
         </motion.div>
         <motion.div
-          className="navbar__text"
+          className="navbar__text navbar__text__white"
           variants={elementNavbarVariants}
-          onClick={() => {
-            
-          }}
+          onClick={() => {}}
         >
           <span>
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
@@ -99,9 +100,7 @@ const IntegralesNav = ({
 
           <div
             className="navbar__responsive__container__text"
-            onClick={() => {
-              
-            }}
+            onClick={() => {}}
           >
             <span>
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
@@ -113,7 +112,7 @@ const IntegralesNav = ({
         </div>
       </motion.div>
       <motion.div
-        variants={containerNavbarBlurVariants}
+        variants={containerNavbarBlurWhiteVariants}
         initial="hidden"
         animate="visible"
         exit="exit"

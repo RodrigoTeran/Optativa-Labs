@@ -58,7 +58,7 @@ const Rules = () => {
             color: "rgba(58, 54, 242, 1)",
           }}
         >
-          V = 4885.8 u<sup>2</sup>
+          V = 4885.8 u<sup>3</sup>
         </h3>
       </div>
       <div className="integralsRules__card">

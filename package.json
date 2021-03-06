@@ -15,7 +15,9 @@
     "react-image-webp": "^0.7.0",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.1",
+    "react-three-fiber": "^5.3.19",
     "react-typing-effect": "^2.0.4",
+    "three": "^0.126.1",
     "web-vitals": "^0.2.4"
   },
   "scripts": {

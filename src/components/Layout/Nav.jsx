@@ -64,7 +64,6 @@ const Nav = ({ aboutRef, workRef, contactRef, whyThisDayRef, whatIDid }) => {
         <IntegralesNav
           openNav={openNav}
           responsiveNav={responsiveNav}
-          // _goto={_goto}
           setResponsiveNav={setResponsiveNav}
         ></IntegralesNav>
       ) : null}

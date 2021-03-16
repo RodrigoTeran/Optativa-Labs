@@ -8,6 +8,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import MCRHeader from "./MCRHeader";
 import MCRBiografia from "./MCRBiografia";
 import MCRDiscografia from "./MCRDiscografia";
+import MCRGiras from "./MCRGiras";
 
 const IndexComponent = () => {
   const [whatView, setWHatView] = useState(0);
@@ -79,7 +80,11 @@ const IndexComponent = () => {
                 }}
               ></MCRDiscografia>
             ) : whatView === 3 ? (
-              <MCRBiografia></MCRBiografia>
+              <MCRGiras
+                returnInfo={() => {
+                  setWHatView(0);
+                }}
+              ></MCRGiras>
             ) : null}
           </AnimatePresence>
         </div>

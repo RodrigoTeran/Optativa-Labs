@@ -1,0 +1,41 @@
+.headerMCR__giras {
+  width: 100%;
+  height: 100%;
+  &__row {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    height: 100%;
+    margin-top: 40px;
+    @media screen and (max-width: 700px) {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  &__col {
+    width: 45%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    span {
+      padding: 25px 20px;
+      width: 100%;
+      text-align: center;
+      background-color: var(--background-color-body-alpha);
+      margin: 0 0 20px;
+      border-radius: 5px;
+      transition: background-color ease-in-out 0.3s, color ease-in-out 0.3s;
+      cursor: default;
+      @media (hover: hover) and (pointer: fine) {
+        &:hover {
+          background-color: var(--text-color-body);
+          color: var(--background-color-body);
+        }
+      }
+    }
+    @media screen and (max-width: 700px) {
+      width: 90%;
+    }
+  }
+}

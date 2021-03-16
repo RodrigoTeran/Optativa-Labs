@@ -16,6 +16,7 @@ import Index from "./pages/Index";
 import Portfolio from "./pages/Portfolio";
 import DiaSinInternet from "./pages/DiaSinInternet";
 import Integrals from "./pages/Integrals";
+import MCR from "./pages/MCR";
 
 const App = () => {
   // LayoutMsg
@@ -88,6 +89,10 @@ const App = () => {
               whyThisDayRef={whyThisDayRef}
               whatIDid={whatIDid}
             ></DiaSinInternet>
+          </Route>
+
+          <Route exact path="/my-chemical-romance">
+            <MCR></MCR>
           </Route>
 
           <Route exact path="/integrales">

@@ -71,7 +71,7 @@ const Layout = () => {
           </motion.div>
         ) : (
           <>
-            {location.pathname === "/integrales" ? (
+            {location.pathname === "/integrales" || location.pathname === "/my-chemical-romance"? (
               <motion.div
                 exit={{
                   opacity: 0,

@@ -1,0 +1,58 @@
+.headerMCR__dis {
+  &__header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    svg {
+      width: 30px;
+      margin: 0 20px 0 0;
+      fill: var(--text-color-body-3);
+      cursor: pointer;
+      transition: transform ease-in-out 0.3s, fill ease-in-out 0.3s;
+      @media (hover: hover) and (pointer: fine) {
+        &:hover {
+          fill: var(--text-selection);
+          transform: scale(1.1);
+        }
+      }
+    }
+    h2 {
+      margin: 0;
+      font-size: 2rem;
+      text-transform: uppercase;
+      color: var(--text-color-body-3);
+    }
+    &__columns {
+      display: flex;
+      &__1 {
+        width: 60%;
+        ul {
+          margin-top: 12.5px;
+        }
+        h3 {
+          font-size: 1.4rem;
+        }
+      }
+      &__2 {
+        width: 40%;
+        img {
+          width: 75%;
+          object-fit: cover;
+        }
+      }
+      @media screen and (max-width: 800px) {
+        flex-direction: column;
+        &__1,
+        &__2 {
+          width: 100%;
+          img {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+  &__principal {
+    margin: 20px 0 0;
+  }
+}

@@ -15,6 +15,7 @@ import { useAnimatedNav } from "../../hooks/useAnimatedNav";
 import PortfolioNav from "./Navs/PortfolioNav";
 import DiaSinInternetNav from "./Navs/DiaSinInternetNav";
 import IntegralesNav from "./Navs/IntegralesNav";
+import MCRNav from "./Navs/MCRNav";
 
 const Nav = ({ aboutRef, workRef, contactRef, whyThisDayRef, whatIDid }) => {
   const [responsiveNav, setResponsiveNav] = useState(false);
@@ -66,6 +67,12 @@ const Nav = ({ aboutRef, workRef, contactRef, whyThisDayRef, whatIDid }) => {
           responsiveNav={responsiveNav}
           setResponsiveNav={setResponsiveNav}
         ></IntegralesNav>
+      ) : location.pathname === "/my-chemical-romance" ? (
+        <MCRNav
+          openNav={openNav}
+          responsiveNav={responsiveNav}
+          setResponsiveNav={setResponsiveNav}
+        ></MCRNav>
       ) : null}
     </AnimatePresence>
   );

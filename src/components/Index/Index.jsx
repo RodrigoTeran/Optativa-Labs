@@ -43,6 +43,13 @@ const Index = () => {
             </Link>
           </h2>
         </li>
+        <li>
+          <h2>
+            <Link to="/my-chemical-romance">
+              <div>Lab 4: My Chemical Romance</div>
+            </Link>
+          </h2>
+        </li>
       </ul>
     </motion.div>
   );

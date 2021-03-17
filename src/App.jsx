@@ -17,6 +17,7 @@ import Portfolio from "./pages/Portfolio";
 import DiaSinInternet from "./pages/DiaSinInternet";
 import Integrals from "./pages/Integrals";
 import MCR from "./pages/MCR";
+import Fotos from "./pages/Fotos";
 
 const App = () => {
   // LayoutMsg
@@ -97,6 +98,10 @@ const App = () => {
 
           <Route exact path="/integrales">
             <Integrals></Integrals>
+          </Route>
+
+          <Route exact path="/fotos">
+            <Fotos></Fotos>
           </Route>
 
           <Route path="/">

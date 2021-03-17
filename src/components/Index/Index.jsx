@@ -50,6 +50,13 @@ const Index = () => {
             </Link>
           </h2>
         </li>
+        <li>
+          <h2>
+            <Link to="/fotos">
+              <div>Lab 5: Galería de Fotos</div>
+            </Link>
+          </h2>
+        </li>
       </ul>
     </motion.div>
   );

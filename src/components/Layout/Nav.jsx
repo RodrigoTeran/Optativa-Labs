@@ -61,7 +61,9 @@ const Nav = ({ aboutRef, workRef, contactRef, whyThisDayRef, whatIDid }) => {
           _goto={_goto}
           setResponsiveNav={setResponsiveNav}
         ></DiaSinInternetNav>
-      ) : location.pathname === "/integrales" || location.pathname === "/fotos" ? (
+      ) : location.pathname === "/integrales" ||
+        location.pathname === "/fotos" ||
+        location.pathname === "/javascript" ? (
         <IntegralesNav
           openNav={openNav}
           responsiveNav={responsiveNav}

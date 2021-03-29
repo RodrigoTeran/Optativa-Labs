@@ -18,6 +18,7 @@ import DiaSinInternet from "./pages/DiaSinInternet";
 import Integrals from "./pages/Integrals";
 import MCR from "./pages/MCR";
 import Fotos from "./pages/Fotos";
+import UsoDeJavaScript from "./pages/UsoDeJavaScript";
 
 const App = () => {
   // LayoutMsg
@@ -102,6 +103,10 @@ const App = () => {
 
           <Route exact path="/fotos">
             <Fotos></Fotos>
+          </Route>
+
+          <Route exact path="/javascript">
+            <UsoDeJavaScript></UsoDeJavaScript>
           </Route>
 
           <Route path="/">

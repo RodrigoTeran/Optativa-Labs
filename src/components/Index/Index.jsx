@@ -57,6 +57,13 @@ const Index = () => {
             </Link>
           </h2>
         </li>
+        <li>
+          <h2>
+            <Link to="/javascript">
+              <div>Lab 6: Uso de Javascript</div>
+            </Link>
+          </h2>
+        </li>
       </ul>
     </motion.div>
   );

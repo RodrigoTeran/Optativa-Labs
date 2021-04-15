@@ -16,6 +16,7 @@
       href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Roboto:wght@100&display=swap"
       rel="stylesheet"
     />
+    <script src="https://unpkg.com/tesseract.js@v2.0.2/dist/tesseract.min.js"></script>
     <title>Optativa Labs</title>
   </head>
   <body>
@@ -23,5 +24,22 @@
       >Tienes que habilitar Javascript para poder ver esta página web.</noscript
     >
     <div id="root"></div>
+    <script>
+      const calcu = function () {
+        if (sessionStorage.getItem("calcu") === "true") {
+          document.getElementById("resultCalculadora").innerText =
+            "Analizando...";
+          var src = document.getElementById("superImage").src;
+          sessionStorage.setItem("calcu", "false")
+          Tesseract.recognize(src, "eng", {
+            logger: (m) => {},
+          }).then(({ data: { text } }) => {
+            document.getElementById("resultCalculadora").innerText = text;
+            sessionStorage.setItem("calcu", "false")
+          });
+        }
+      };
+      window.addEventListener("mousemove", calcu);
+    </script>
   </body>
 </html>

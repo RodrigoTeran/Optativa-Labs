@@ -64,6 +64,13 @@ const Index = () => {
             </Link>
           </h2>
         </li>
+        <li>
+          <h2>
+            <Link to="/calculadora">
+              <div>Lab 7: Analizador de textos con Javascript</div>
+            </Link>
+          </h2>
+        </li>        
       </ul>
     </motion.div>
   );

@@ -19,6 +19,7 @@ import Integrals from "./pages/Integrals";
 import MCR from "./pages/MCR";
 import Fotos from "./pages/Fotos";
 import UsoDeJavaScript from "./pages/UsoDeJavaScript";
+import Calculadora from "./pages/Calculadora";
 
 const App = () => {
   // LayoutMsg
@@ -99,6 +100,10 @@ const App = () => {
 
           <Route exact path="/integrales">
             <Integrals></Integrals>
+          </Route>
+
+          <Route exact path="/calculadora">
+            <Calculadora></Calculadora>
           </Route>
 
           <Route exact path="/fotos">

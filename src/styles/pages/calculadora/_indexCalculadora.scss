@@ -1,0 +1,58 @@
+.calculadoraPage {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  padding: 0 20px;
+  text-align: center;
+  h4 {
+    margin: 30px;
+    font-weight: normal;
+  }
+  a {
+    margin: 0 0 30px;
+    color: var(--text-selection);
+    font-weight: bold;
+    transition: color ease-in-out 0.1s;
+    @media (hover: hover) and (pointer: fine) {
+      &:hover {
+        color: var(--text-color-body);
+      }
+    }
+  }
+  p {
+    text-align: center;
+    font-size: 1.2rem;
+    margin-bottom: 100px;
+    margin-top: 40px;
+    font-weight: bold;
+  }
+  input[type="file"] {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+  }
+  &__input-special {
+    background-color: var(--text-selection);
+    padding: 10px 20px;
+    color: var(--box-shadow-color-blocks-index);
+    cursor: pointer;
+    transition: all ease-in-out 0.3s;
+    @media (hover: hover) and (pointer: fine) {
+      &:hover {
+        color: var(--text-selection);
+        transform: scale(1.2);
+        background-color: var(--box-shadow-color-blocks-index);
+      }
+    }
+  }
+  img {
+    width: 30vw;
+    max-height: 30vw;
+    object-fit: contain;
+    margin-bottom: 30px;
+  }
+}

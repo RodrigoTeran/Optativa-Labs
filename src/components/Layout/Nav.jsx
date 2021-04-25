@@ -64,6 +64,7 @@ const Nav = ({ aboutRef, workRef, contactRef, whyThisDayRef, whatIDid }) => {
       ) : location.pathname === "/integrales" ||
         location.pathname === "/fotos" ||
         location.pathname === "/javascript" ||
+        location.pathname === "/memes" ||
         location.pathname === "/calculadora" ? (
         <IntegralesNav
           openNav={openNav}

@@ -70,7 +70,14 @@ const Index = () => {
               <div>Lab 7: Analizador de textos con Javascript</div>
             </Link>
           </h2>
-        </li>        
+        </li>   
+        <li>
+          <h2>
+            <Link to="/memes">
+              <div>Lab 8: Creador de memes</div>
+            </Link>
+          </h2>
+        </li>              
       </ul>
     </motion.div>
   );

@@ -20,6 +20,7 @@ import MCR from "./pages/MCR";
 import Fotos from "./pages/Fotos";
 import UsoDeJavaScript from "./pages/UsoDeJavaScript";
 import Calculadora from "./pages/Calculadora";
+import Memes from "./pages/Memes";
 
 const App = () => {
   // LayoutMsg
@@ -112,6 +113,10 @@ const App = () => {
 
           <Route exact path="/javascript">
             <UsoDeJavaScript></UsoDeJavaScript>
+          </Route>
+
+          <Route exact path="/memes">
+            <Memes></Memes>
           </Route>
 
           <Route path="/">

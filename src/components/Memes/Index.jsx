@@ -20,6 +20,9 @@ const MemesIndex = () => {
 
   const [isRendering, setIsRendering] = useState(false);
 
+  // IMPORTANT
+  const [arrayElements, setArrayElements] = useState([]);
+
   const onSubmitInput = () => {
     setSrcImageYes(false);
     var oldArray = imagesToMeme;
@@ -112,12 +115,19 @@ const MemesIndex = () => {
                     deleteImageToMeme(index);
                   }}
                   index={index}
+                  setArrayElements={setArrayElements}
+                  arrayElements={arrayElements}
+                  rerender={rerender}
                 ></CardImage>
               </div>
             );
           })}
         </div>
-        <Canvas></Canvas>
+        <Canvas
+          arrayElements={arrayElements}
+          setArrayElements={setArrayElements}
+          rerender={rerender}
+        ></Canvas>
       </div>
       <CroppImages
         imageSrc={imageSrc}

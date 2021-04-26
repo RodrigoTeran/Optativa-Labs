@@ -15,7 +15,6 @@ const CroppImages = ({
 
   isResponse,
   setIsResponse,
-  setSrcImageToDelete,
 }) => {
   const [firstScroll, setFirstScroll] = useState(false);
 
@@ -112,7 +111,7 @@ const CroppImages = ({
                   }}
                   initialAspectRatio={1}
                   guides={true}
-                  aspectRatio={1}
+                  aspectRatio={0}
                   crop={_crop}
                   onInitialized={onCropperInit}
                   movable={false}
@@ -120,14 +119,11 @@ const CroppImages = ({
                 ></Cropper>
               </div>
               <div className="cropper-container-my-container-images-image">
-                <img
-                  src={imageDestination}
+                <div
                   style={{
-                    width: "300px",
-                    height: "300px",
+                    backgroundImage: `url(${imageDestination})`,
                   }}
-                  alt="Imagen Recortada"
-                />
+                ></div>
               </div>
             </motion.div>
             <motion.div

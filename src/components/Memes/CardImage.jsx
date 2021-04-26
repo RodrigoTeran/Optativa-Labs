@@ -1,9 +1,31 @@
 import React from "react";
 
-const CardImage = ({ srcImage, deleteImage, index }) => {
+const CardImage = ({
+  srcImage,
+  deleteImage,
+  index,
+  setArrayElements,
+  arrayElements,
+  rerender,
+}) => {
+  const modifyCanvas = () => {
+    var old = arrayElements;
+    old.push({
+      type: "image",
+      info: srcImage,
+      zIndex: 0,
+      open: false,
+      x: 0,
+      y: 0,
+      color: "#000",
+    });
+    setArrayElements(old);
+    rerender();
+  };
+
   return (
     <div className={`cardImageMeme`}>
-      <img src={srcImage} alt="Imagen Meme" />
+      <img onClick={modifyCanvas} src={srcImage} alt="Imagen Meme" />
       <button
         onClick={() => {
           deleteImage(index);

@@ -1,0 +1,56 @@
+.memesCanvas__canvas {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100% - 50px);
+  width: 100%;
+  &__container {
+    width: 325px;
+    height: 325px;
+    &__real {
+      width: 325px;
+      height: 325px;
+      margin: 0;
+      color: var(--primary-color);
+      background-color: var(--secondary-color);
+      position: relative;
+      cursor: pointer;
+      overflow: hidden;
+      &.withBorder {
+        border: 3px solid var(--linear-gradient-darker);
+      }
+      div,
+      img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        font-size: 1.2rem;
+        font-weight: bold;
+        &.withBorder {
+          outline: 3px solid var(--linear-gradient-darker);
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 500px) {
+    height: calc(100% - 100px);
+  }
+  @media screen and (max-width: 400px) {
+    &__container {
+      width: 300px;
+      height: 300px;
+      &__real {
+        width: 300px;
+        height: 300px;
+      }
+    }
+  }
+}
+#color__memes {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+}

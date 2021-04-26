@@ -18,6 +18,7 @@ const Canvas = ({ arrayElements, setArrayElements, rerender }) => {
 
   const getImage = () => {
     window.scrollTo(0, 0);
+    // lets see...
     html2canvas(canvasRef.current).then(function (canvas) {
       setCanvasImg(canvas.toDataURL("image/png"));
       downloadLink.current.click();

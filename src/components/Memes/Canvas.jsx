@@ -17,7 +17,7 @@ const Canvas = ({ arrayElements, setArrayElements, rerender }) => {
   const [isTextOpen, setIsTextOpen] = useState(false);
 
   const getImage = () => {
-    // window.scrollTo(0, 0);
+    window.scrollTo(0, 0);
     html2canvas(canvasRef.current).then(function (canvas) {
       setCanvasImg(canvas.toDataURL("image/png"));
       downloadLink.current.click();

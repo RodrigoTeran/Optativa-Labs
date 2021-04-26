@@ -1,4 +1,4 @@
-import React, { useRef, useState, useEffect } from "react";
+import React, { useRef, useState } from "react";
 import html2canvas from "html2canvas";
 import ButtonWhiteRectangle from "./ButtonWhiteRectangle";
 
@@ -17,7 +17,7 @@ const Canvas = ({ arrayElements, setArrayElements, rerender }) => {
   const [isTextOpen, setIsTextOpen] = useState(false);
 
   const getImage = () => {
-    window.scrollTo(0, 0);
+    // window.scrollTo(0, 0);
     html2canvas(canvasRef.current).then(function (canvas) {
       setCanvasImg(canvas.toDataURL("image/png"));
       downloadLink.current.click();
@@ -63,7 +63,7 @@ const Canvas = ({ arrayElements, setArrayElements, rerender }) => {
         type: arrayElements[i].type,
         info: arrayElements[i].info,
         zIndex: arrayElements[i].zIndex,
-        open: index == i ? true : false,
+        open: index === i ? true : false,
         x: arrayElements[i].x,
         y: arrayElements[i].y,
         color: arrayElements[i].color,
@@ -107,7 +107,7 @@ const Canvas = ({ arrayElements, setArrayElements, rerender }) => {
         open: arrayElements[i].open,
         x: arrayElements[i].x,
         y: arrayElements[i].y,
-        color: index == i ? e.target.value : arrayElements[i].color,
+        color: index === i ? e.target.value : arrayElements[i].color,
       });
     }
     setArrayElements(old);
@@ -141,8 +141,8 @@ const Canvas = ({ arrayElements, setArrayElements, rerender }) => {
         info: arrayElements[i].info,
         zIndex: arrayElements[i].zIndex,
         open: arrayElements[i].open,
-        x: index == i ? x : arrayElements[i].x,
-        y: index == i ? y : arrayElements[i].y,
+        x: index === i ? x : arrayElements[i].x,
+        y: index === i ? y : arrayElements[i].y,
         color: arrayElements[i].color,
       });
     }
@@ -155,7 +155,7 @@ const Canvas = ({ arrayElements, setArrayElements, rerender }) => {
     var old = [];
     var index = whoIsSelected();
     for (var i = 0; i < arrayElements.length; i++) {
-      if (index == i) {
+      if (index === i) {
         continue;
       }
       old.push({
@@ -324,7 +324,7 @@ const Canvas = ({ arrayElements, setArrayElements, rerender }) => {
                 return (
                   <img
                     src={element.info}
-                    alt="Image"
+                    alt="Image meme"
                     id={`image__canvas__${index}`}
                     key={index}
                     style={{
